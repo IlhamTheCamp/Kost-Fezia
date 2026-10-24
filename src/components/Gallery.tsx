@@ -41,13 +41,13 @@ export default function Gallery() {
   };
 
   return (
-    <section id="galeri" className="bg-gray-50 px-5 py-16 sm:py-24">
+    <section id="galeri" className="bg-surface-alt px-5 py-16 sm:py-24">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Foto Kost</h2>
-        <p className="mt-2 text-gray-600">Ketuk foto untuk melihat lebih besar.</p>
+        <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Foto Kost</h2>
+        <p className="mt-2 text-muted">Ketuk foto untuk melihat lebih besar.</p>
 
         {total === 0 ? (
-          <p className="mt-8 text-gray-500">Foto akan segera ditambahkan.</p>
+          <p className="mt-8 text-muted">Foto akan segera ditambahkan.</p>
         ) : (
           <ul className="mt-8 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3">
             {galleryImages.map((img, i) => (
@@ -55,7 +55,7 @@ export default function Gallery() {
                 <button
                   onClick={() => setActive(i)}
                   aria-label={`Buka foto: ${img.alt}`}
-                  className="relative block aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-200 active:opacity-80"
+                  className="relative block aspect-[4/3] w-full overflow-hidden rounded-xl bg-line active:opacity-80"
                 >
                   <Image
                     src={img.src}
